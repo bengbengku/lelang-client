@@ -1,6 +1,6 @@
 import React from "react";
 import { SegmentedControl, Text } from "@mantine/core";
-import { IconGavel, IconUserCircle, IconMail, IconHandStop } from "@tabler/icons-react";
+import { IconHome2, IconUserCircle, IconMail, IconHandStop, IconGavel } from "@tabler/icons-react";
 import { footerNavStyles } from "../../styles/footerNavStyles";
 
 type Props = {};
@@ -11,6 +11,15 @@ const FooterNavigation = (props: Props) => {
     <div className={classes.navigation}>
       <SegmentedControl
         data={[
+          {
+            value: "beranda",
+            label: (
+              <div className={classes.itemNav}>
+                <IconHome2 size="1.2rem" />
+                <Text>Beranda</Text>
+              </div>
+            ),
+          },
           {
             value: "lelang",
             label: (
