@@ -41,4 +41,7 @@ export const headerStyles = createStyles((theme) => ({
     borderRadius: "20px",
     marginRight: "15px",
   },
+  titleLelangSaya: {
+    marginLeft: "0.835rem",
+  },
 }));

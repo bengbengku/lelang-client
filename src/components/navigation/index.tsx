@@ -1,32 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { SegmentedControl, Text } from "@mantine/core";
 import { IconHome2, IconUserCircle, IconMail, IconHandStop, IconGavel } from "@tabler/icons-react";
 import { footerNavStyles } from "../../styles/footerNavStyles";
+import { Link } from "react-router-dom";
 
-type Props = {};
+type Props = {
+  navigation: string;
+};
 
-const FooterNavigation = (props: Props) => {
+const FooterNavigation = ({ navigation }: Props) => {
   const { classes } = footerNavStyles();
+  const [value, setValue] = useState<string>(navigation);
   return (
     <div className={classes.navigation}>
       <SegmentedControl
+        value={value}
+        onChange={setValue}
         data={[
           {
             value: "beranda",
             label: (
-              <div className={classes.itemNav}>
+              <Link to="/" className={classes.itemNav}>
                 <IconHome2 size="1.2rem" />
                 <Text>Beranda</Text>
-              </div>
+              </Link>
             ),
           },
           {
             value: "lelang",
             label: (
-              <div className={classes.itemNav}>
+              <Link to="/dashboard/lelang" className={classes.itemNav}>
                 <IconGavel size="1.2rem" />
                 <Text>Lelang</Text>
-              </div>
+              </Link>
             ),
           },
           {

@@ -9,10 +9,10 @@ const HomePage = () => {
   const { classes } = homeStyles();
   return (
     <>
-      <HeaderComponent />
+      <HeaderComponent type="home" />
       <main id="home-page" className={classes.home}>
         <Intro />
-        <FooterNavigation />
+        <FooterNavigation navigation="beranda" />
       </main>
     </>
   );

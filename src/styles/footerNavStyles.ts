@@ -21,5 +21,7 @@ export const footerNavStyles = createStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    textDecoration: "none",
+    color: "#fff",
   },
 }));
