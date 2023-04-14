@@ -37,4 +37,10 @@ export const lelangStyles = createStyles((theme) => ({
   wrapLelangAction: {
     paddingTop: "2rem",
   },
+  create: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "1rem",
+    padding: "1em",
+  },
 }));

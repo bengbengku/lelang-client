@@ -42,6 +42,9 @@ export const headerStyles = createStyles((theme) => ({
     marginRight: "15px",
   },
   titleLelangSaya: {
+    display: "flex",
+    alignItems: "center",
+    gap: "0.5rem",
     marginLeft: "0.835rem",
   },
 }));

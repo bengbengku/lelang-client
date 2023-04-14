@@ -7,12 +7,19 @@ import { Link, useNavigate } from "react-router-dom";
 const DashboardBtnLelang = () => {
   const { classes } = lelangStyles();
   const navigate = useNavigate();
+
+  function btnNavigate() {
+    navigate("/dashboard/lelang/create");
+  }
+
   return (
     <section className={classes.wrapCreateLelang}>
       <Badge radius="xs" color="yellow.3">
         Buat Lelang
       </Badge>
-      <button className={classes.btnCreateLelang}>Buat Lelang Baru +</button>
+      <button className={classes.btnCreateLelang} onClick={btnNavigate}>
+        Buat Lelang Baru +
+      </button>
       <div className={classes.textPanduan}>
         <IconWorldQuestion size={16} />
         <Text c="dimmed" fz={11}>

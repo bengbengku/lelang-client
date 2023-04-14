@@ -10,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/dashboard/lelang" element={<DashboardLelang />} />
+        <Route path="/dashboard/lelang/:isCreate" element={<DashboardLelang />} />
       </Routes>
     </main>
   );
